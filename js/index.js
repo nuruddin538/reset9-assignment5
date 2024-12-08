@@ -1,6 +1,9 @@
 function navigateToBlog() {
     window.location.href = 'blog.html';
 }
+function navigateToHome() {
+    window.location.href = '/';
+}
 
 // utilitis function
 
@@ -63,7 +66,7 @@ function showPopupCard(message) {
 function addToHistory(message){
     const historySection = document.getElementById("history-section");
     const historyCard = document.createElement("div");
-    historyCard.className = "py-6 border border-solid mt-4 rounded-md";
+    historyCard.className = "py-6 border border-solid shadow-md mt-4 rounded-md";
     const currentDate = new Date();
     const formatedDate = new Intl.DateTimeFormat("en-US", {
         weekday: "long",
@@ -177,3 +180,4 @@ donationTab.addEventListener("click", function(){
     document.getElementById("donate-card").classList.remove("hidden");
     document.getElementById("history-section").classList.add("hidden");
 })
+  

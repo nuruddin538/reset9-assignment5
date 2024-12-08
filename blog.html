@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Donation Bangladesh</title>
+        <!--tailwind daisy ui -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Google Fonts CDN -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+          rel="stylesheet"
+        />
+        <style>
+          .font-lexend {
+            font-family: "Lexend", sans-serif;
+          }
+          .hidden {
+            display: none;
+          }
+          .active{
+            font-weight: bold;
+            color: #71717125;
+          }
+          .show {
+            display: block;
+          }
+        </style>
+      </head>
+<body>
+    <!-- navbar section -->
+    <div class="border border-b shadow-md sticky top-0 z-50 bg-[#F9F7F3]/80 backdrop-blur-sm">
+        <nav class="bg-[#F9F7F3]">
+          <div class="w-10/12 h-auto mx-auto">
+            <div class="text-center md:flex md:justify-between items-center py-8 md:py-6">
+              <div><button class="btn bg-[#B4F461]" onclick="navigateToHome()">Home</button></div>
+              <div class="flex justify-center items-center sm:mb-4">
+                <img src="assets/logo.png" alt="logo" />
+                <h3 class="ml-4">Donate Bangladesh</h3>
+              </div>
+              <div class="flex items-center justify-center sm:mt-2">
+                <img class="mr-2" src="assets/coin.png" alt="coin" />
+                <span class="mr-2" id="total-balance">5500</span> BDT
+              </div>
+            </div>
+          </div>
+        </nav>
+       </div>
+
+       <!-- main section -->
+       <section class="w-10/12 h-auto mx-auto">
+        <div class="flex justify-start items-center py-8">
+            <h1 class="text-4xl text-[#252B35] font-bold">Inportant FAQ</h1>
+            <img width="80px" height="80px" src="assets/faq.jpg" alt="FAQ">
+        </div>
+        <!-- Accordion card -->
+         <div class="border border-solid shadow-md py-6">
+            <div class="p-4 border-b">
+                <div class="mb-3">
+                    <h2 class="text-lg text-[#474749] font-bold" id="document-object">What is the Document Object Model(DOM)?</h2>
+                </div>
+                <div>
+                    <p class="text-base text-[#6B6B6B] font-normal hidden" id="document-object-text">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a web page as a tree of objects that can be accessed and manipulated using programming languages like JavaScript. In simple terms, it is the way browsers structure the content of a webpage (HTML or XML documents) so that it can be accessed and changed dynamically.</p>
+                </div>
+            </div>
+            <div class="p-4 border-b">
+                <div class="mb-3">
+                    <h2 class="text-lg text-[#474749] font-bold" id="document-object-select">How do you select an element from the Dom?</h2>
+                </div>
+                <div>
+                    <p class="text-base text-[#6B6B6B] font-normal hidden" id="document-object-select-text">Selecting elements from the DOM is one of the fundamental tasks in web development. JavaScript provides several methods to retrieve elements based on their ID, class, tag, or other attributes. Use querySelector and querySelectorAll for flexibility and modern CSS selector support.
+                        Always check for null when using getElementById or querySelector to avoid runtime errors.
+                        For dynamic content, prefer querySelectorAll over getElementsBy* since it returns a static list.
+                        Use proper selectors for performance (e.g., avoid overly complex selectors).</p>
+                </div>
+            </div>
+            <div class="p-4 border-b">
+                <div class="mb-3">
+                    <h2 class="text-lg text-[#474749] font-bold" id="delegate-context">what is event delegation in the context of the DOM, Why is it useful?</h2>
+                </div>
+                <div>
+                    <p class="text-base text-[#6B6B6B] font-normal hidden" id="delegate-context-text">Event delegation is a technique in JavaScript where you attach a single event listener to a parent element to manage events on its child elements, even if those child elements are added dynamically after the parent has been created. Instead of adding an event listener to every child element, you use the parent element to "delegate" the event handling.
+
+                        This works because of event bubbling, a behavior where an event triggered on a child element propagates up the DOM tree to its ancestors.</p>
+                </div>
+            </div>
+            <div class="p-4 border-b">
+                <div class="mb-3">
+                    <h2 class="text-lg text-[#474749] font-bold" id="manipulate-attributes">How do you manipulate an elemets attributes and styles using the Dom?
+                    </h2>
+                </div>
+                <div>
+                    <p class="text-base text-[#6B6B6B] font-normal hidden" id="manipulate-attributes-text">Attributes provide additional information about an HTML element, such as id, class, href, src, etc. You can change or retrieve these attributes using the DOM. You can directly manipulate the inline CSS styles of an element via the style property of an element. This property allows you to modify any CSS property of that element directly from JavaScript.</p>
+                </div>
+            </div>
+         </div>
+       </section>
+
+
+       <!-- script link -->
+        <script src="js/index.js"></script>
+        <script src="js/blog.js"></script>
+</body>
+</html>
