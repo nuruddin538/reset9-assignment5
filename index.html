@@ -38,7 +38,7 @@
               </div>
               <div class="flex items-center justify-center sm:mt-2">
                 <img class="mr-2" src="assets/coin.png" alt="coin" />
-                <span class="mr-2">5500</span> BDT
+                <span class="mr-2" id="total-balance">5500</span> BDT
               </div>
             </div>
           </div>
@@ -59,32 +59,41 @@
               <div class="card lg:card-side bg-base-100 shadow-xl p-6 mb-6 flex flex-col lg:flex-row items-center lg:items-start">
                   <img class="w-full sm:w-auto mx-auto mb-4 lg:mb-0" src="assets/noakhali.png" alt="noakhali" />
                 <div class="card-body">
-                  <button class="btn w-32 h-auto"><img src="assets/coin.png" alt="coin"><span>0</span> BDT</button>
+                  <button class="btn w-44 h-auto"><img src="assets/coin.png" alt="coin"><span id="noakhali-donate-add">0</span> BDT</button>
                   <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
                   <p>Natural disasters remind us of our shared humanity. Recently, the picturesque region of Noakhali in Bangladesh has been struck by devastating floods, leaving thousands of families homeless and struggling to survive. As we witness their plight, we have a chance to make a meaningful difference..</p>
-                  <input class="outline-none border border-solid rounded-md p-2 mb-2" type="number" placeholder="write down amount" id="">
-                    <button class="btn bg-[#B4F461] mt-2">Donate Now</button>
+                  <input class="outline-none border border-solid rounded-md p-2 mb-2" type="number" placeholder="write down amount" id="noakhali-donate-balance">
+                  <p id="noakhali-error" class="text-red-500 text-xs mt-1 hidden">
+                    ⚠️ Invalid amount!
+                  </p>
+                    <button class="btn bg-[#B4F461] mt-2" id="noakhali-donate-btn">Donate Now</button>
                 </div>
               </div>
               <div class="card lg:card-side bg-base-100 shadow-xl p-6 mb-6 flex flex-col lg:flex-row items-center lg:items-start">
                   <img class="w-full sm:w-auto mx-auto mb-4 lg:mb-0" src="assets/feni.png" alt="feni" />
                 <div class="card-body">
-                  <button class="btn w-32 h-auto"><img src="assets/coin.png" alt="coin"><span>0</span> BDT</button>
+                  <button class="btn w-44 h-auto"><img src="assets/coin.png" alt="coin"><span id="feni-donate-add">0</span> BDT</button>
                   <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
                   <p>Continuous torrential rains have caused rivers in Feni to overflow, inundating villages, towns, and farmlands. Thousands of families are now homeless, with limited access to food, clean water, and medical supplies. Schools and markets are closed, livelihoods are disrupted, and recovery seems like a distant dream for many.</p>
-                  <input class="outline-none border border-solid rounded-md p-2 mb-2" type="number" placeholder="write down amount" id="">
-                    <button class="btn bg-[#B4F461] mt-2">Donate Now</button>
+                  <input class="outline-none border border-solid rounded-md p-2 mb-2" type="number" placeholder="write down amount" id="feni-donate-balance">
+                  <p id="feni-error" class="text-red-500 text-xs mt-1 hidden">
+                    ⚠️ Invalid amount!
+                  </p>
+                    <button class="btn bg-[#B4F461] mt-2" id="feni-donate-btn">Donate Now</button>
                 </div>
               </div>
               <div class="card lg:card-side bg-base-100 shadow-xl p-6 mb-3 flex flex-col lg:flex-row items-center lg:items-start">
                 <img class="w-full sm:w-auto mx-auto mb-4 lg:mb-0" src="assets/quota-protest.png" alt="noakhali" />
                 <div class="card-body">
-                  <button class="btn w-32 h-auto"><img src="assets/coin.png" alt="coin"><span>0</span> BDT</button>
+                  <button class="btn w-44 h-auto"><img src="assets/coin.png" alt="coin"><span id="quota-donate-add">0</span> BDT</button>
                   <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
                   <p>The Quota Reform Movement began as a call for equity in government job recruitment, demanding a reduction in the quota system's disproportionate allocation. The movement, largely peaceful, met with violent crackdowns, leaving many protesters injured and in need of medical assistance.
                     These individuals, many of them students, sacrificed their safety for the dream of a more equitable future. It’s our responsibility to ensure they don’t bear the aftermath alone</p>
-                  <input class="outline-none border border-solid rounded-md p-2 mb-2" type="number" placeholder="write down amount" id="">
-                    <button class="btn bg-[#B4F461] mt-2">Donate Now</button>
+                  <input class="outline-none border border-solid rounded-md p-2 mb-2" type="number" placeholder="write down amount" id="quota-donate-balance">
+                  <p id="quota-error" class="text-red-500 text-xs mt-1 hidden">
+                    ⚠️ Invalid amount!
+                  </p>
+                    <button class="btn bg-[#B4F461] mt-2" id="quota-donate-btn">Donate Now</button>
                 </div>
               </div>
             </div>
@@ -93,12 +102,12 @@
       </section>
       <section class="w-10/12 hidden h-auto mx-auto my-12" id="history-section">
         <!-- History section -->
-        <div class="py-6 border border-solid mt-12 rounded-md">
+        <!-- <div class="py-6 border border-solid mt-12 rounded-md">
           <div class="p-4">
             <h3>Donate for Flood Relief in Feni,Bangladesh</h3>
             <span>Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</span>
           </div>
-         </div>
+         </div> -->
       </section>
     </div>
 
