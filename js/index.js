@@ -64,10 +64,25 @@ function addToHistory(message){
     const historySection = document.getElementById("history-section");
     const historyCard = document.createElement("div");
     historyCard.className = "py-6 border border-solid mt-4 rounded-md";
+    const currentDate = new Date();
+    const formatedDate = new Intl.DateTimeFormat("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    }).format(currentDate);
+
+    const formattedTime = new Intl.DateTimeFormat("en-US", {
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        hour12: true,
+    }).format(currentDate);
+
     historyCard.innerHTML = `
         <div class="p-4">
             <h3>${message}</h3>
-            <span>Date: ${new Date().toLocaleDateString()}</span>
+            <span>Date: ${formatedDate}, Time: ${formattedTime}</span>
         </div>
     `;
     historySection.appendChild(historyCard);
